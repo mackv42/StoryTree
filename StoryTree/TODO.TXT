@@ -1,1 +1,0 @@
-Create chapter Class and move a lot of logic from story into it
