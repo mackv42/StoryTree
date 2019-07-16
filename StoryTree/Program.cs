@@ -97,19 +97,8 @@ namespace ChooseYourOwnAdventure
                 return UI.promptForOptions("The king asks you the meaning of life is. What do you say?",
                     new List<string>() { "I don't know", "42", "Music", "Food" });
             });
-
-            /*constantinople.AddLevel();*/
-
-            /*
-            constantinople.AddNode(() =>
-            {
-                UI.printAndWait("King: Not much of a philosopher", 1000);
-                Console.WriteLine("Let's try again");
-                return (int)GO_UP;
-            });*/
-
             
-            constantinople.AddLevel(new List<StoryNode>{
+            constantinople.AddLevel(new List<IStoryNode>{
                 new StoryNodeDefault(() =>
                 {
                     UI.printAndWait("King: Not much of a philosopher", 1000);

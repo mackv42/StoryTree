@@ -10,13 +10,13 @@ namespace ChooseYourOwnAdventure
         END = -42
     };
 
-    public interface StoryNode
+    public interface IStoryNode
     {
         int Run();
         int getResult();
     }
 
-    public class StoryNodeDefault : StoryNode
+    public class StoryNodeDefault : IStoryNode
     {
         private Func<int> function;
         private int result;
@@ -45,7 +45,7 @@ namespace ChooseYourOwnAdventure
 
     public class StoryTree
     {
-        private List<List<StoryNode>> story;
+        private List<List<IStoryNode>> story;
         public string Title;
         private List<int> choicesList;
 
@@ -83,7 +83,7 @@ namespace ChooseYourOwnAdventure
             this.chapterChange = false;
             this.branches = new Dictionary<string, StoryTree>();
 
-            this.story = new List<List<StoryNode>>();
+            this.story = new List<List<IStoryNode>>();
 
             this.Title = storyName;
 
@@ -98,15 +98,15 @@ namespace ChooseYourOwnAdventure
 
         public void AddLevel()
         {
-            story.Add(new List<StoryNode>());
+            story.Add(new List<IStoryNode>());
         }
 
-        public void AddLevel(List<StoryNode> nodes)
+        public void AddLevel(List<IStoryNode> nodes)
         {
             story.Add(nodes);
         }
 
-        public void AddNode( StoryNode n )
+        public void AddNode( IStoryNode n )
         {
             this.story[story.Count - 1].Add(n);
         }
@@ -153,13 +153,11 @@ namespace ChooseYourOwnAdventure
                 
                 if (chapterChange)
                 {
-                    i = story.Count+1;
                     chapterChange = false;
                     Start();
+                    break;
                 }
             }
-
-            
         }
     }
 }
