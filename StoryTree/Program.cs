@@ -9,7 +9,9 @@ namespace ChooseYourOwnAdventure
     {
         static void Main(string[] args)
         {
-            StoryTree myStory = new StoryTree("The Journey");
+            StoryTree root = new StoryTree("Journey");
+
+            StoryTree myStory = root.branch("The Beginning");
 
             myStory.AddLevel();
 
@@ -44,7 +46,7 @@ namespace ChooseYourOwnAdventure
                 UI.printAndWait("You walk to Camelot...", 1000);
                 Console.WriteLine("They send you back on a Sick Horse.");
                 UI.printAndWait("You make it back and the horse dies", 600);
-                return (int)GO_UP - 1;
+                return (int)GO_UP;
             });
 
             myStory.AddNode(() =>
@@ -61,8 +63,6 @@ namespace ChooseYourOwnAdventure
                 myStory.changeChapter("Skipping along to Constantinople");
                 return 0;
             });
-
-            
 
             StoryTree constantinople = myStory.branch("Skipping along to Constantinople");
             constantinople.AddLevel();
@@ -90,23 +90,60 @@ namespace ChooseYourOwnAdventure
                 return 0;
             });
 
+            constantinople.AddLevel();
+
+            constantinople.AddNode(() =>
+            {
+                return UI.promptForOptions("The king asks you the meaning of life is. What do you say?",
+                    new List<string>() { "I don't know", "42", "Music", "Food" });
+            });
+
+            /*constantinople.AddLevel();*/
+
+            /*
+            constantinople.AddNode(() =>
+            {
+                UI.printAndWait("King: Not much of a philosopher", 1000);
+                Console.WriteLine("Let's try again");
+                return (int)GO_UP;
+            });*/
+
+            
+            constantinople.AddLevel(new List<StoryNode>{
+                new StoryNodeDefault(() =>
+                {
+                    UI.printAndWait("King: Not much of a philosopher", 1000);
+                    Console.WriteLine("Let's try again");
+                    return (int) GO_UP;
+                }),
+                new StoryNodeDefault(() =>
+                {
+                    Console.WriteLine("You are abducted by Aliens");
+                    return (int)END;
+                }),
+                new StoryNodeDefault(() =>
+                {
+                    Console.WriteLine("Join me for merry making in the mess hall");
+                    return 1;
+                }),
+                new StoryNodeDefault(() =>
+                {
+                    Console.WriteLine("Join me for food in the mess hall");
+                    return (int)END;
+                })
+            }); 
+            
+
             myStory.AddNode(() =>
             {
                 Console.WriteLine("You Walk into the Woods to take a nap");
-                myStory.changeChapter("Into the Woods");
-                return 0;
-            });
-
-            StoryTree woods = myStory.branch("Into the Woods");
-
-            woods.AddLevel();
-            woods.AddNode(() =>
-            {
                 Console.WriteLine("You wake up feeling Refreshed in the morning and don't feel like leaving");
                 return (int)GO_UP;
             });
 
+           
             myStory.Start();
         }
     }
 }
+

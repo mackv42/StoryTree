@@ -38,12 +38,17 @@ namespace ChooseYourOwnAdventure
         }
     }
 
+    public static class Container
+    {
+        public static Dictionary<String, StoryTree> chapterList;
+    }
+
     public class StoryTree
     {
         private List<List<StoryNode>> story;
         public string Title;
         private List<int> choicesList;
-        private List<StoryTree> chapters;
+
         private bool chapterChange;
 
         private Dictionary<string, StoryTree> branches;
@@ -55,31 +60,40 @@ namespace ChooseYourOwnAdventure
 
         public void changeChapter(string nameId)
         {
-            chapters.Add(this);
-            story = branches[nameId].story;
-            chapterChange = true;
+            try
+            {
+                story = branches[nameId].story;
+                chapterChange = true;
+            } catch( Exception E)
+            {
+                story = Container.chapterList[nameId].story;
+            }
         }
-
+        
         public StoryTree branch(string name)
         {
             branches.Add(name, new StoryTree(name));
+
+
             return branches[name];
         }
 
         public StoryTree(string storyName)
         {
             this.chapterChange = false;
-            this.chapters = new List<StoryTree>();
             this.branches = new Dictionary<string, StoryTree>();
+
             this.story = new List<List<StoryNode>>();
 
             this.Title = storyName;
 
             this.AddLevel();
+
             story[0].Add(new StoryNodeDefault(() => {
                 UI.printTitle(storyName);
                 return 0;
             }));
+        
         }
 
         public void AddLevel()
@@ -89,10 +103,7 @@ namespace ChooseYourOwnAdventure
 
         public void AddLevel(List<StoryNode> nodes)
         {
-            for (int i = 0; i < nodes.Count; i++)
-            {
-                this.story[story.Count - 1].Add(nodes[i]);
-            }
+            story.Add(nodes);
         }
 
         public void AddNode( StoryNode n )
@@ -107,7 +118,6 @@ namespace ChooseYourOwnAdventure
 
         public void Start()
         {
-            int[] currentNode = new int[2] { 0, 0 };
             int choice = 0;
             int tmp = 0;
 
@@ -117,8 +127,6 @@ namespace ChooseYourOwnAdventure
             {
                 tmp = story[i][choice].Run();
 
-                
-
                 if (tmp == (int)StorySwitches.END)
                 {
                     break;
@@ -126,6 +134,7 @@ namespace ChooseYourOwnAdventure
 
                 if (tmp == (int)StorySwitches.GO_UP)
                 {
+                    
                     i -= 2;
                     choice = choicesList[i];
                     continue;
@@ -141,13 +150,16 @@ namespace ChooseYourOwnAdventure
 
                 choicesList.Add(tmp);
                 choice = tmp;
+                
+                if (chapterChange)
+                {
+                    i = story.Count+1;
+                    chapterChange = false;
+                    Start();
+                }
             }
 
-            if (chapterChange)
-            {
-                chapterChange = false;
-                this.Start();
-            }
+            
         }
     }
 }
