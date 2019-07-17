@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChooseYourOwnAdventure
+namespace TextAdventure
 {
     public class UI
     {

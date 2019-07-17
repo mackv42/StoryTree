@@ -90,7 +90,6 @@ namespace ChooseYourOwnAdventure
             this.AddLevel();
 
             story[0].Add(new StoryNodeDefault(() => {
-                UI.printTitle(storyName);
                 return 0;
             }));
         

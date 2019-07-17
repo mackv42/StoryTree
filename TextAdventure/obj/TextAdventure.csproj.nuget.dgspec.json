@@ -1,0 +1,114 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj",
+        "projectName": "StoryTree",
+        "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj",
+        "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventure.csproj",
+        "projectName": "TextAdventure",
+        "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventure.csproj",
+        "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj": {
+                "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
