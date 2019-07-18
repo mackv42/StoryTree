@@ -713,9 +713,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventure.csproj",
-      "projectName": "TextAdventure",
-      "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventure.csproj",
+      "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventuresBasic.csproj",
+      "projectName": "TextAdventuresBasic",
+      "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventuresBasic.csproj",
       "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\obj\\",
       "projectStyle": "PackageReference",

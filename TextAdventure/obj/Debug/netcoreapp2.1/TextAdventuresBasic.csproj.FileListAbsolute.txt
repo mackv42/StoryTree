@@ -1,0 +1,14 @@
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\TextAdventuresBasic.deps.json
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\TextAdventuresBasic.runtimeconfig.json
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\TextAdventuresBasic.runtimeconfig.dev.json
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\TextAdventuresBasic.dll
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\TextAdventuresBasic.pdb
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\StoryTree.dll
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\bin\Debug\netcoreapp2.1\StoryTree.pdb
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.csprojAssemblyReference.cache
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.AssemblyInfoInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.AssemblyInfo.cs
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.csproj.CopyComplete
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.dll
+C:\Users\Vincent\source\repos\StoryTree\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventuresBasic.pdb

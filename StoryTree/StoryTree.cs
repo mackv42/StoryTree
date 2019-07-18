@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChooseYourOwnAdventure
+namespace storyTree
 {
     public enum StorySwitches
     {
         GO_UP = -1,
-        END = -42
+        END = -42,
+        NULL = -int.MaxValue
     };
 
     public interface IStoryNode
     {
         int Run();
-        int getResult();
+        int? getResult();
     }
 
     public class StoryNodeDefault : IStoryNode
@@ -23,6 +24,7 @@ namespace ChooseYourOwnAdventure
 
         public StoryNodeDefault(Func<int> callback)
         {
+            result = (int)StorySwitches.NULL;
             function = callback;
         }
 
@@ -32,7 +34,7 @@ namespace ChooseYourOwnAdventure
             return result;
         }
 
-        public int getResult()
+        public int? getResult()
         {
             return result;
         }
@@ -92,7 +94,25 @@ namespace ChooseYourOwnAdventure
             story[0].Add(new StoryNodeDefault(() => {
                 return 0;
             }));
-        
+        }
+
+        public List<IStoryNode> TraversePath()
+        {
+            List<IStoryNode> ret = new List<IStoryNode>();
+            for(int i=0; i<story.Count; i++)
+            {
+                for(int j=0; j<story[i].Count; j++)
+                {
+                    if (story[i][j].getResult() != (int)StorySwitches.NULL)
+                    {
+                        ret.Add(story[i][j]);
+                        //Adds twice for some reason
+                        break;
+                    }
+                }
+            }
+
+            return ret;
         }
 
         public void AddLevel()

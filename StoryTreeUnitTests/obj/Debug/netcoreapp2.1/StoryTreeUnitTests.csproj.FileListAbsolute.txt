@@ -1,0 +1,17 @@
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.csprojAssemblyReference.cache
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.AssemblyInfoInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.AssemblyInfo.cs
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTreeUnitTests.deps.json
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTreeUnitTests.runtimeconfig.json
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTreeUnitTests.runtimeconfig.dev.json
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTreeUnitTests.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTreeUnitTests.pdb
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTree.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\bin\Debug\netcoreapp2.1\StoryTree.pdb
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.csproj.CopyComplete
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTreeUnitTests\obj\Debug\netcoreapp2.1\StoryTreeUnitTests.pdb

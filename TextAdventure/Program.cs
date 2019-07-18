@@ -1,7 +1,7 @@
 ﻿using System;
-using ChooseYourOwnAdventure;
+using storyTree;
 using System.Collections.Generic;
-using static ChooseYourOwnAdventure.StorySwitches;
+using static storyTree.StorySwitches;
 
 namespace TextAdventure
 {
@@ -9,6 +9,8 @@ namespace TextAdventure
     {
         public static void adventure1()
         {
+            
+            
             StoryTree root = new StoryTree("Journey");
 
             StoryTree myStory = root.branch("The Beginning");
@@ -28,7 +30,6 @@ namespace TextAdventure
                 Console.WriteLine("Wrong Choice You Were Eaten By a Bear!");
                 return (int)END;
             });
-
 
             myStory.AddNode(() =>
             {
@@ -187,10 +188,42 @@ namespace TextAdventure
                 {
                     UI.printAndWait("You manage to fight off the dogs", 500);
                     Console.WriteLine("The Dogs flee");
-                    return 1;
+                    return 0;
                 })
             });
 
+            myStory.AddLevel();
+            myStory.AddNode(() =>
+           {
+               Console.Clear();
+               UI.printAndWait("You continue walking", 2000);
+               UI.printAndWait("You begin to feel Very tired from walking", 500);
+               Console.WriteLine("You see a cave");
+               return UI.yesNo("would you like to go in the cave") ? 0 : 1;
+           });
+
+            myStory.AddLevel(new List<IStoryNode>()
+            {
+                new StoryNodeDefault(() =>{
+                    Console.Clear();
+                    UI.printAndWait("You go Into the cave", 300);
+                    Console.WriteLine("You see a fire that's surrounded by cavemen");
+                    Console.WriteLine("You Walk up to the fire");
+                    myStory.changeChapter("fire with the cavemen");
+                    return 0;
+                }),
+                new StoryNodeDefault(() =>{
+                    return (int)END;
+                })
+            });
+
+            StoryTree fire = myStory.branch("fire with the cavemen");
+            fire.AddLevel(new List<IStoryNode>()
+            {
+                new StoryNodeDefault( () => {UI.printTitle("Fire with the cavemen");
+                    return 0;
+                })
+            });
             myStory.Start();
         }
     }
@@ -211,8 +244,6 @@ namespace TextAdventure
                     stories.dinosaurLand();
                     break;
             }
-
-            
         }
     }
 }

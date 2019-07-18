@@ -1,0 +1,11 @@
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\bin\Release\netcoreapp2.1\StoryTree.deps.json
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\bin\Release\netcoreapp2.1\StoryTree.runtimeconfig.json
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\bin\Release\netcoreapp2.1\StoryTree.runtimeconfig.dev.json
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\bin\Release\netcoreapp2.1\StoryTree.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\bin\Release\netcoreapp2.1\StoryTree.pdb
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\obj\Release\netcoreapp2.1\StoryTree.csprojAssemblyReference.cache
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\obj\Release\netcoreapp2.1\StoryTree.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\obj\Release\netcoreapp2.1\StoryTree.AssemblyInfoInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\obj\Release\netcoreapp2.1\StoryTree.AssemblyInfo.cs
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\obj\Release\netcoreapp2.1\StoryTree.dll
+C:\Users\Vincent\source\repos\StoryTree\StoryTree\obj\Release\netcoreapp2.1\StoryTree.pdb
