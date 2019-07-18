@@ -14,11 +14,11 @@ namespace StoryTreeUnitTests
             int expected = 1;
             StoryNodeDefault test = new StoryNodeDefault(() =>
             {
-                return 1;
+                return new StorySwitch(1);
             });
 
             test.Run();
-            Assert.IsTrue(test.getResult() == expected);
+            Assert.IsTrue(test.getResult().option == expected);
         }
 
         [TestMethod]
@@ -29,32 +29,32 @@ namespace StoryTreeUnitTests
             myStory.AddLevel();
 
             // 1
-            myStory.AddNode(() => { return 1; });
+            myStory.AddNode(() => { return new StorySwitch(1); });
 
             
             //0
             myStory.AddLevel();
             myStory.AddNode(new StoryNodeDefault(() =>
             {
-                return 1;
+                return new StorySwitch(1);
             }));
             
             myStory.AddNode(new StoryNodeDefault(() =>
             {
-                return 0;
+                return new StorySwitch(0);
             }));
             /////////////////////////////////////////
 
             //1
             myStory.AddLevel();
-            myStory.AddNode(() => { return 1; });
-            myStory.AddNode(() => { return 0; });
+            myStory.AddNode(() => { return new StorySwitch(1); });
+            myStory.AddNode(() => { return new StorySwitch(0); });
 
             //7
             myStory.AddLevel();
-            myStory.AddNode(() => { return 6; });
-            myStory.AddNode(() => { return 7; });
-            myStory.AddNode(() => { return 8; });
+            myStory.AddNode(() => { return new StorySwitch(6); });
+            myStory.AddNode(() => { return new StorySwitch(7); });
+            myStory.AddNode(() => { return new StorySwitch(8); });
 
             myStory.Start();
 
@@ -64,7 +64,7 @@ namespace StoryTreeUnitTests
 
             for(int i=0; i<test.Count; i++)
             {
-                Assert.IsTrue(test[i].getResult() == expected[i]);
+                Assert.IsTrue(test[i].getResult().option == expected[i]);
             }
         }
 

@@ -57,6 +57,14 @@ namespace storyTree
             levels = 0;
             option = opt;
         }
+
+        public StorySwitch(bool die)
+        {
+            END = true;
+            UP = false;
+            levels = 0;
+            option = 0;
+        }
     }
 
     public interface IStoryNode
@@ -203,8 +211,7 @@ namespace storyTree
 
                 if (choiceTmp.levels != 0)
                 {
-                    
-                    i -= choiceTmp.levels-1;
+                    i -= choiceTmp.levels+1;
                     choice = choicesList[i];
                     continue;
                 }
