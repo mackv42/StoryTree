@@ -26,7 +26,7 @@ namespace ChooseYourOwnAdventure
                 {
                     myStory.AddNode(() =>
                     {
-                        return rnd.Next(0, j);
+                        return new StorySwitch(rnd.Next(0, j));
                     });
                 }
             }
@@ -47,12 +47,12 @@ namespace ChooseYourOwnAdventure
             ts.Hours, ts.Minutes, ts.Seconds,
             ts.Milliseconds / 10));
 
-            /*
+            
             List<IStoryNode> test = myStory.TraversePath();
             for (int i = 0; i < test.Count; i++)
             {
-                Console.Write(test[i].getResult());
-            }*/
+                Console.Write(test[i].getResult().option);
+            }
         }
     }
 }

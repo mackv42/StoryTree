@@ -6,46 +6,84 @@ namespace storyTree
 {
     public enum StorySwitches
     {
-        GO_UP = -1,
-        END = -42,
         NULL = -int.MaxValue
     };
 
+    public struct GO_UP
+    {
+        public int levels { get { return levels; } set { levels = value; } }
+        public GO_UP(int l)
+        {
+            levels = l;
+        }
+    }
+
     public struct StorySwitch
     {
-        public struct GO_UP
-        {
-            bool a;
-            int levels;
-        }
+        public bool UP;
         public bool END;
         public int option;
+        public int levels;
+
+        
+        public StorySwitch(int opt, bool e, bool up)
+        {
+            END = e;
+            option = opt;
+            UP = up;
+
+            if (UP)
+            {
+                levels = 1;
+            }
+            else
+            {
+                levels = 0;
+            }
+        }
+
+        public StorySwitch(int opt, int levels)
+        {
+            END = false;
+            UP = true;
+            option = opt;
+            this.levels = levels;
+        }
+
+        public StorySwitch(int opt)
+        {
+            END = false;
+            UP = false;
+            levels = 0;
+            option = opt;
+        }
     }
 
     public interface IStoryNode
     {
-        int Run();
-        int? getResult();
+        StorySwitch Run();
+        StorySwitch getResult();
     }
 
     public class StoryNodeDefault : IStoryNode
     {
-        private Func<int> function;
-        private int result;
+        private Func<StorySwitch> function;
+        private StorySwitch result;
 
-        public StoryNodeDefault(Func<int> callback)
+        public StoryNodeDefault(Func<StorySwitch> callback)
         {
-            result = (int)StorySwitches.NULL;
+            result = new StorySwitch();
+            result.option = (int)StorySwitches.NULL;
             function = callback;
         }
 
-        public int Run()
+        public StorySwitch Run()
         {
             this.result = function();
             return result;
         }
 
-        public int? getResult()
+        public StorySwitch getResult()
         {
             return result;
         }
@@ -103,7 +141,7 @@ namespace storyTree
             this.AddLevel();
 
             story[0].Add(new StoryNodeDefault(() => {
-                return 0;
+                return new StorySwitch();
             }));
         }
 
@@ -114,7 +152,7 @@ namespace storyTree
             {
                 for(int j=0; j<story[i].Count; j++)
                 {
-                    if (story[i][j].getResult() != (int)StorySwitches.NULL)
+                    if (story[i][j].getResult().option != (int)StorySwitches.NULL)
                     {
                         ret.Add(story[i][j]);
                         //Adds twice for some reason
@@ -141,7 +179,7 @@ namespace storyTree
             this.story[story.Count - 1].Add(n);
         }
 
-        public void AddNode(Func<int> function)
+        public void AddNode(Func<StorySwitch> function)
         {
             this.story[story.Count - 1].Add(new StoryNodeDefault(function));
         }
@@ -150,31 +188,24 @@ namespace storyTree
         {
             int choice = 0;
             int tmp = 0;
-
+            StorySwitch choiceTmp = new StorySwitch(0);
             choicesList = new List<int>();
 
             for (int i = 0; i < story.Count; i++)
             {
-                tmp = story[i][choice].Run();
+                choiceTmp = story[i][choice].Run();
+                tmp = choiceTmp.option;
 
-                if (tmp == (int)StorySwitches.END)
+                if (choiceTmp.END)
                 {
                     break;
                 }
 
-                if (tmp == (int)StorySwitches.GO_UP)
+                if (choiceTmp.levels != 0)
                 {
                     
-                    i -= 2;
+                    i -= choiceTmp.levels-1;
                     choice = choicesList[i];
-                    continue;
-                }
-
-                if (tmp < (int)StorySwitches.GO_UP)
-                {
-                    i -= tmp - 1;
-                    choice = choicesList[i];
-
                     continue;
                 }
 
