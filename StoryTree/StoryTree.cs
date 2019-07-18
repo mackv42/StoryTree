@@ -11,6 +11,17 @@ namespace storyTree
         NULL = -int.MaxValue
     };
 
+    public struct StorySwitch
+    {
+        public struct GO_UP
+        {
+            bool a;
+            int levels;
+        }
+        public bool END;
+        public int option;
+    }
+
     public interface IStoryNode
     {
         int Run();
