@@ -27,7 +27,7 @@ namespace TextAdventure
 
             myStory.AddNode(() =>
             {
-                Console.WriteLine("Wrong Choice You Were Eaten By a Bear!");
+                Console.WriteLine("You Are Eaten By a Bear!");
                 return new StorySwitch(false);
             });
 
@@ -47,7 +47,8 @@ namespace TextAdventure
                 UI.printAndWait("You walk to Camelot...", 1000);
                 Console.WriteLine("They send you back on a Sick Horse.");
                 UI.printAndWait("You make it back and the horse dies", 600);
-                return new StorySwitch(1, 1);
+                Console.WriteLine("You are back to the beginning and go left");
+                return new StorySwitch(1, 0);
             });
 
             myStory.AddNode(() =>

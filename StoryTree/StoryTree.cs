@@ -42,11 +42,18 @@ namespace storyTree
             }
         }
 
-        public StorySwitch(int opt, int levels)
+        public StorySwitch(int levels, int opt)
         {
             END = false;
             UP = true;
             option = opt;
+            this.levels = levels;
+        }
+
+        public void Go_UP(int levels)
+        {
+            UP = true;
+            option = (int)StorySwitches.NULL;
             this.levels = levels;
         }
 
@@ -163,7 +170,6 @@ namespace storyTree
                     if (story[i][j].getResult().option != (int)StorySwitches.NULL)
                     {
                         ret.Add(story[i][j]);
-                        //Adds twice for some reason
                         break;
                     }
                 }
@@ -212,7 +218,14 @@ namespace storyTree
                 if (choiceTmp.levels != 0)
                 {
                     i -= choiceTmp.levels+1;
-                    choice = choicesList[i];
+                    if (choiceTmp.option == (int)StorySwitches.NULL)
+                    {
+                        choice = choicesList[i];
+                    }
+                    else
+                    {
+                        choice = choiceTmp.option;
+                    }
                     continue;
                 }
 
