@@ -17,8 +17,7 @@ namespace ChooseYourOwnAdventure
             
             stopWatch.Start();
             
-            //74 mb 9 x 50,000 = (450,000) - 9
-            //74/4.5 = 
+           
             for(int i=0; i<50000; i++)
             {
                 myStory.AddLevel();

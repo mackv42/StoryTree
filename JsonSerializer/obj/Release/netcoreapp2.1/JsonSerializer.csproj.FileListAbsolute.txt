@@ -1,0 +1,3 @@
+C:\Users\Vincent\source\repos\StoryTree\JsonSerializer\obj\Release\netcoreapp2.1\JsonSerializer.csproj.CoreCompileInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\JsonSerializer\obj\Release\netcoreapp2.1\JsonSerializer.AssemblyInfoInputs.cache
+C:\Users\Vincent\source\repos\StoryTree\JsonSerializer\obj\Release\netcoreapp2.1\JsonSerializer.AssemblyInfo.cs

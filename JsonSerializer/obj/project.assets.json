@@ -207,16 +207,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "StoryTree/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "compile": {
-          "bin/placeholder/StoryTree.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StoryTree.dll": {}
-        }
       }
     }
   },
@@ -690,17 +680,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "StoryTree/1.0.0": {
-      "type": "project",
-      "path": "../StoryTree/StoryTree.csproj",
-      "msbuildProject": "../StoryTree/StoryTree.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0",
-      "StoryTree >= 1.0.0"
+      "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -710,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventuresBasic.csproj",
-      "projectName": "TextAdventuresBasic",
-      "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\TextAdventuresBasic.csproj",
+      "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\JsonSerializer.csproj",
+      "projectName": "JsonSerializer",
+      "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\JsonSerializer.csproj",
       "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\TextAdventure\\obj\\",
+      "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -732,11 +716,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj": {
-              "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

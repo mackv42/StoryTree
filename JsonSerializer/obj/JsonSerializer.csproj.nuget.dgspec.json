@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj": {}
+    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\JsonSerializer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj": {
+    "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\JsonSerializer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj",
-        "projectName": "StoryTree",
-        "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\StoryTree.csproj",
+        "projectUniqueName": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\JsonSerializer.csproj",
+        "projectName": "JsonSerializer",
+        "projectPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\JsonSerializer.csproj",
         "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\StoryTree\\obj\\",
+        "outputPath": "C:\\Users\\Vincent\\source\\repos\\StoryTree\\JsonSerializer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

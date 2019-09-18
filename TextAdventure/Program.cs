@@ -8,9 +8,7 @@ namespace TextAdventure
     static class stories
     {
         public static void adventure1()
-        {
-            
-            
+        { 
             StoryTree root = new StoryTree("Journey");
 
             StoryTree myStory = root.branch("The Beginning");
@@ -36,6 +34,7 @@ namespace TextAdventure
                 Console.WriteLine("You continue on the right path");
                 Console.WriteLine("The path Splits 3 ways Each has a sign leading to Camelot, Babylon and Constantinople");
                 Console.WriteLine("You are growing slightly fatigued and feel like taking a nap also...");
+
                 return new StorySwitch(UI.promptForOptions("Which Way do you choose to go?",
                     new List<string>() { "Camelot", "Babylon", "Constantinople", "Nap" }));
             });
@@ -120,6 +119,8 @@ namespace TextAdventure
                 new StoryNodeDefault(() =>
                 {
                     Console.WriteLine("Join me for food in the mess hall");
+                    constantinople = new StoryTree("");
+                    constantinople.changeChapter("apple");
                     return new StorySwitch(false);
                 })
             });
